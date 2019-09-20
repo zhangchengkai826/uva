@@ -78,7 +78,6 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-<<<<<<< HEAD
 [Unit4]
 FileName=7-7s.cpp
 CompileCpp=1
@@ -89,5 +88,3 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-=======
->>>>>>> add
