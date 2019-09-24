@@ -32,22 +32,34 @@ void dfs(int subset, int indent) {
     int right = subset^left;
     
     for(int i = 0; i < indent; i++) {
-			printf(" ");
-		}
-		printf("left=%d, right=%d\n", left, right);
+		printf(" ");
+	}
+	printf("left=%d, right=%d\n", left, right);
     
     double d1 = sum[right] / sum[subset];
     double d2 = sum[left] / sum[subset];
+    
+	for(int i = 0; i < indent; i++) {
+		printf(" ");
+	}
+	printf("d1=%lf, d2=%lf\n", d1, d2);
 
     dfs(left, indent+1); dfs(right, indent+1);
 
-    for(int i = 0; i < tree[left].size(); i++)
-      for(int j = 0; j < tree[right].size(); j++) {
+    for(int i = 0; i < tree[left].size(); i++) {
+    	for(int j = 0; j < tree[right].size(); j++) {
         Tree t;
         t.L = max(tree[left][i].L + d1, tree[right][j].L - d2);
         t.R = max(tree[right][j].R + d2, tree[left][i].R - d1);
+        
+        for(int i = 0; i < indent; i++) {
+			printf(" ");
+		}
+		printf("t.L=%lf, t.R=%lf\n", t.L, t.R);
+        
         if(t.L + t.R < r) tree[subset].push_back(t);
       }
+	}
   }
 
   if(!have_children) tree[subset].push_back(Tree());
@@ -81,7 +93,7 @@ int main() {
     double ans = -1;
     for(int i = 0; i < tree[root].size(); i++)
       ans = max(ans, tree[root][i].L + tree[root][i].R);
-//    printf("%.10lf\n", ans);
+    printf("%.10lf\n", ans);
 		printf("\n");
   }
   return 0;
