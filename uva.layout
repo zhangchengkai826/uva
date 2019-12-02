@@ -1,9 +1,17 @@
 [Editors]
+<<<<<<< HEAD
 Order=3,0,2,1
 Focused=3
 [Editor_0]
 CursorCol=4
 CursorRow=1
+=======
+Order=0
+Focused=0
+[Editor_0]
+CursorCol=3
+CursorRow=9
+>>>>>>> add
 TopLine=1
 LeftChar=1
 [Editor_1]
