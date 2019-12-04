@@ -24,5 +24,10 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
+<<<<<<< HEAD
 obj/1380_p297_9-26.o: 1380_p297_9-26.cpp
 	$(CPP) -c 1380_p297_9-26.cpp -o obj/1380_p297_9-26.o $(CXXFLAGS)
+=======
+obj/12170_p457e_9-25.o: 12170_p457e_9-25.cpp
+	$(CPP) -c 12170_p457e_9-25.cpp -o obj/12170_p457e_9-25.o $(CXXFLAGS)
+>>>>>>> add
