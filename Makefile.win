@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = obj/1380_p297_9-26.o
-LINKOBJ  = obj/1380_p297_9-26.o
+OBJ      = obj/1375_p301_9-30.o
+LINKOBJ  = obj/1375_p301_9-30.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -24,10 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-<<<<<<< HEAD
-obj/1380_p297_9-26.o: 1380_p297_9-26.cpp
-	$(CPP) -c 1380_p297_9-26.cpp -o obj/1380_p297_9-26.o $(CXXFLAGS)
-=======
-obj/12170_p457e_9-25.o: 12170_p457e_9-25.cpp
-	$(CPP) -c 12170_p457e_9-25.cpp -o obj/12170_p457e_9-25.o $(CXXFLAGS)
->>>>>>> add
+obj/1375_p301_9-30.o: 1375_p301_9-30.cpp
+	$(CPP) -c 1375_p301_9-30.cpp -o obj/1375_p301_9-30.o $(CXXFLAGS)
