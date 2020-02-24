@@ -1,17 +1,17 @@
 # Project: uva
 # Makefile created by Dev-C++ 5.11
 
-CPP      = g++.exe
-CC       = gcc.exe
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = obj/1375_p301_9-30.o
-LINKOBJ  = obj/1375_p301_9-30.o
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+OBJ      = obj/ccf-2019-09-4.o
+LINKOBJ  = obj/ccf-2019-09-4.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = bin/uva.exe
-CXXFLAGS = $(CXXINCS) -Ofast -DLOCAL
-CFLAGS   = $(INCS) -Ofast
+CXXFLAGS = $(CXXINCS) -Ofast -g3 -DLOCAL
+CFLAGS   = $(INCS) -Ofast -g3
 RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom
@@ -24,5 +24,5 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-obj/1375_p301_9-30.o: 1375_p301_9-30.cpp
-	$(CPP) -c 1375_p301_9-30.cpp -o obj/1375_p301_9-30.o $(CXXFLAGS)
+obj/ccf-2019-09-4.o: ccf-2019-09-4.cpp
+	$(CPP) -c ccf-2019-09-4.cpp -o obj/ccf-2019-09-4.o $(CXXFLAGS)
